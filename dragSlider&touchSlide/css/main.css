@@ -1,0 +1,56 @@
+/* 초기화 및 태그 지정 스타일 */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+img {
+    width : 100%;
+    height: 100%;
+}
+
+/* 슬라이드 태그 */
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: 992px;
+    height: 768px;
+}
+.slides {
+    width: 10000px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -992px;
+    cursor: pointer;
+}
+.slides.transition{
+    transition: all .5s ease-in-out;
+}
+.slide {
+    width: 992px;
+    height: 768px;
+}
+
+/* 버튼 태그 */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 4rem;
+}
+.next {
+    right: 4rem;
+}
+.prev {
+    left: 4rem;
+}
+.prev:active, .next:active {
+    color: darkred;
+}
